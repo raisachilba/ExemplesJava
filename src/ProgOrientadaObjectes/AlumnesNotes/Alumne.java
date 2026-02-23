@@ -32,11 +32,9 @@ public class Alumne {
 
     public double calcMitjanaPonderadaNotes(){
         double sum = 0;
-        int numNotes = 0;
         for(int i = 0; i<historialNotes.length-1; i++){
             if(historialNotes[i]!=null){
                 sum = sum + historialNotes[i].getValor();
-                numNotes++;
             }
         }
         return sum/numNotes;
@@ -47,6 +45,7 @@ public class Alumne {
         String millorNota = null;
         for(int i = 0; i< historialNotes.length; i++){
             if(historialNotes[i].getValor()>max){
+                max = historialNotes[i].getValor();
                 millorNota = historialNotes[i].getAssignatura();
             }
         }
